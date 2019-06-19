@@ -46,12 +46,9 @@ where U.country=O.country';
     echo "<br>";
 
 
-    $result = $stmt->fetch();
-
-
-    foreach ($result as $row)
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
-        echo $row . "\r\n";
+        echo $row;
     }
 }
 catch(PDOException $e)

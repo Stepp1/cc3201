@@ -30,13 +30,9 @@ order by p.name asc;';
     echo "<br>";
 
 
-    $result = $stmt->fetch();
-    echo "fetched\n";
-    echo "<br>";
-
-    foreach ($result as $row)
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
-        echo $row . "\r\n";
+        echo $row;
     }
 }
 catch(PDOException $e)
