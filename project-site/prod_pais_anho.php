@@ -8,16 +8,18 @@ try {
     $fuente = $_GET['input'];
 
     $sql = 'Select p.name
-FROM plant p
-Where id_plant in (
-Select q.id_plant
-From location q
-where q.latitude between 0 and 90)
-and id_plant not in (
-Select q.id_plant
-from fuel q
-where q.fuel = ?)
-order by p.name asc;';
+    FROM plant p, production prod
+    Where p.id_plant in (
+    Select q.id_plant
+    From location q
+    where q.latitude between 0 and 90)
+    and p.id_plant not in (
+    Select q.id_plant
+    from fuel q
+    where q.fuel = :fuel)
+    AND prod.id_plant = p.id_plant
+    order by prod.electricity_generation, p.name asc
+    LIMIT 50';
 
 
     $stmt = $pdo->prepare($sql);
@@ -25,7 +27,8 @@ order by p.name asc;';
     echo "consulta preparada\n";
     echo "<br>";
 
-    $stmt->execute($fuente);
+    $stmt->bindValue(':fuel', $fuente);
+    $stmt->execute();
     echo "execute\n";
     echo "<br>";
 
