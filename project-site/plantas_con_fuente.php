@@ -1,7 +1,7 @@
-
+44
 <?php
 try {
-    $pdo = new PDO('pgsql:dbname=cc3201;host=localhost;port=5432;user=visit;password=visitpass');
+    $pdo = new PDO('pgsql:dbname=cc3201;host=localhost;port=5432;user=visit;password=***');
     echo "PDO connection object created\n";
     echo "<br>";
 
