@@ -1,1 +1,2 @@
-# cc3201
+# Database Course Project - CC3201
+
