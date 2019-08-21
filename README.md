@@ -17,9 +17,7 @@ We used the following technologies to implement the site:
 * PHP
 * JS 
 
-We have three Views: About, Contact and Index.
-
-NOTE: The Views on this repo aren't the ones presented. See report on root directory.
+We have three urls: About, Contact and Index.
 
 ### Queries
 
