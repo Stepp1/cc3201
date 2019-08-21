@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -85,38 +85,81 @@
     </div>
 
     <!-- main-container -->
-    <div class="container main-container">
+<!--    <div class="container main-container">
         <div class="col-md-12">
             <img src="http://placehold.it/1920x1080" alt="" class="img-responsive" />
             <div class="h-30"></div>
         </div>
-
+-->
         <div class="col-md-12">
-            <h3 class="text-uppercase">project title</h3>
-            <h5>Creative & Lorem ipsum dolor sit amet</h5>
+            <h3 class="text-uppercase">A Database for Global Powerplants</h3>
+            <h5>Una Base de Datos de Centrales Energéticas</h5>
             <div class="h-30"></div>
         </div>
 
         <div class="col-md-9">
-            <p>Loremss ipsum dolor sit amet, consectetur adipiscing elit. Aliter enim nosmet ipsos nosse non possumus. Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Tecum optime, deinde etiam cum mediocri amico. Et nemo nimium beatus est; Ac ne plura complectar-sunt enim innumerabilia-, bene laudata virtus voluptatis aditus ultimum cum ultimo sapientiae Et nemo nimium beatus est </p>
+		<p>
+		La base de datos que se creado para este proyecto consiste de un conjunto de plantas de centrales energéticas del mundo. Esta centraliza datos de cada planta para que sea más fácil de navegar, comparar y sacar ideas para el análisis de cada una.
+		</p>
+		<p>
+			La base de datos cubre aproximadamente 30.000 plantas de 164 países e incluye las centrales térmicas (por ejemplo carbón, gas, biomasa, nuclear, petróleo, residuosotermica, ...) y renovables (por eje hidroeléctrica, eólica, solar, ...).<br> 
+		</p>
+		<p>
+			Cada planta es geolocalizada y las entradas contienen información sobre la capacidad de la planta, generación, propiedad y tipo de combustible.</p>
+		</p>
+            
+		<p>
+<i class="ion-ios-circle-filled"></i>  La primera consulta usted puede ingresar el nombre de algun pais mediante su nombre en  <a href="http://utils.mucattu.com/iso_3166-1.html">ISO alfa-3</a>, es decir, si buscas Argentina
+ basta con poner ARG. Luego la respuesta que tendra sera el nombre del pais (escrito en forma extensa esta vez), la fuente de energia mas recurrente en el pais, la cantidad de fuentes de energias asociadas a esta misma en dicho pais
+ y por ultimo el promedio de energia generada por dicha planta
+	    	</p>            
+ <body>
+<center>
+<form action="info_pais.php" method="get">
+Ingrese nombre pais:<br>
+<input type="text" name="input"></br>
+<input type="submit" value="Submit">
+</form>
+</center>
+</body>
+                <p>
+<i class="ion-ios-circle-filled"></i> En esta consulta, usted ingresara una fuente de energia y obtendra las plantas con su nombre, pais y produccion de energia promedio correspondientes que se encuentren en el hemisferio norte asociadas a la energia que solicito
+                </p>
+ <body>
+<center>
+<form action="prod_pais_anho.php" method="get">
+Ingrese fuente de energia:<br>
+<input type="text" name="input"></br>
+<input type="submit" value="Submit">
+</form>
+</center>
+</body>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter enim nosmet ipsos nosse non possumus. Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Tecum optime, deinde etiam cum mediocri amico. Et nemo nimium beatus est; Ac ne plura complectar-sunt enim innumerabilia </p>
+                <p>
+<i class="ion-ios-circle-filled"></i>  En la siguiente consulta usted ingresará un país (nuevamente mediante su nombre en <a href="http://utils.mucattu.com/iso_3166-1.html">ISO alfa-3</a>) y además un año
+luego usted  podrá observar que plantas en el país que solicitó, superaron  los 15000 mega watts de energía producida en el año ingresado. 
+                </p>
+ <body>
+<center>
+<form action="plantas_con_fuente.php" method="get">
+Ingrese nombre pais:<br>
+<input type="text" name="pais"></br>
+Ingrese año
+<br>
+<input type="text" name="anho"></br>
+<input type="submit" value="Submit">
+</form>
+</center>
+</body>
+
+
         </div>
-
         <div class="col-md-3">
             <ul class="cat-ul">
-                <li><i class="ion-ios-circle-filled"></i> Design</li>
-                <li><i class="ion-ios-circle-filled"></i> consectetur adipiscing</li>
-                <li><i class="ion-ios-circle-filled"></i> et gubernationis</li>
-                <li><i class="ion-ios-circle-filled"></i> Aliter enim nosmet</li>
-            </ul>
-            <div class="h-10"></div>
-            <h4>Share</h4>
-            <ul class="social-ul">
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+                <li><i class="ion-ios-circle-filled"></i> Una Base de Datos</li>
+                <li><i class="ion-ios-circle-filled"></i> Nivel Mundial</li>
+                <li><i class="ion-ios-circle-filled"></i> Rápida</li>
+                <li><i class="ion-ios-circle-filled"></i> Segura</li>
             </ul>
         </div>
     </div>
@@ -125,7 +168,7 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            <p class="copyright">© Box Portfolio 2016</p>
+            <p class="copyright">�Grupo27 2019</p>
         </div>
     </footer>
     <!-- end footer -->

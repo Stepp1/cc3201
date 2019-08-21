@@ -1,9 +1,7 @@
-44
+
 <?php
 try {
-    $pdo = new PDO('pgsql:dbname=cc3201;host=localhost;port=***;user=visit;password=***');
-    echo "PDO connection object created\n";
-    echo "<br>";
+    $pdo = new PDO('pgsql:dbname=cc3201;host=localhost;port=5432;user=visit;password=visitpass');
 
     $pais = $_GET['pais'];
     $anho = $_GET['anho'];
@@ -25,17 +23,14 @@ order by e.electricity_generation desc;';
 
     $stmt = $pdo->prepare($sql);
 
-    echo "consulta preparada\n";
-    echo "<br>";
 
-    $stmt->execute([$pais, $anho]);
-    echo "execute\n";
-    echo "<br>";
+    $stmt->execute([$anho,$pais]);
 
 
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {
-        echo $row;
+        print_r($row);
+	echo "<br>";
     }
 }
 catch(PDOException $e)
